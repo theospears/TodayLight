@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0AAA2C01E13189A8DF52F6 /* libPods-TodayLightWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DEB876378600CB68C93F98 /* libPods-TodayLightWidget.a */; };
 		E4C2A2471ACA5CD90029E386 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C2A2461ACA5CD90029E386 /* main.m */; };
 		E4C2A24A1ACA5CD90029E386 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C2A2491ACA5CD90029E386 /* AppDelegate.m */; };
 		E4C2A24D1ACA5CD90029E386 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C2A24C1ACA5CD90029E386 /* ViewController.m */; };
@@ -14,6 +15,10 @@
 		E4C2A2521ACA5CD90029E386 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C2A2511ACA5CD90029E386 /* Images.xcassets */; };
 		E4C2A2551ACA5CD90029E386 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C2A2531ACA5CD90029E386 /* LaunchScreen.xib */; };
 		E4C2A2611ACA5CD90029E386 /* TodayLightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C2A2601ACA5CD90029E386 /* TodayLightTests.m */; };
+		E4C2A2711ACA5D9E0029E386 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2A2701ACA5D9E0029E386 /* NotificationCenter.framework */; };
+		E4C2A2771ACA5D9E0029E386 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C2A2761ACA5D9E0029E386 /* TodayViewController.m */; };
+		E4C2A2791ACA5D9E0029E386 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C2A2781ACA5D9E0029E386 /* MainInterface.storyboard */; };
+		E4C2A27C1ACA5D9E0029E386 /* TodayLightWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E4C2A26E1ACA5D9E0029E386 /* TodayLightWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,9 +29,33 @@
 			remoteGlobalIDString = E4C2A2401ACA5CD90029E386;
 			remoteInfo = TodayLight;
 		};
+		E4C2A27A1ACA5D9E0029E386 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4C2A2391ACA5CD90029E386 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4C2A26D1ACA5D9E0029E386;
+			remoteInfo = TodayLightWidget;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E4C2A2801ACA5D9E0029E386 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E4C2A27C1ACA5D9E0029E386 /* TodayLightWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		008D0D05C83612FCBAF4FFF3 /* Pods-TodayLightWidget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayLightWidget.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayLightWidget/Pods-TodayLightWidget.release.xcconfig"; sourceTree = "<group>"; };
+		46C0DAF22FC5D4793B9F012C /* Pods-TodayLightWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayLightWidget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayLightWidget/Pods-TodayLightWidget.debug.xcconfig"; sourceTree = "<group>"; };
+		C1DEB876378600CB68C93F98 /* libPods-TodayLightWidget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TodayLightWidget.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C2A2411ACA5CD90029E386 /* TodayLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C2A2451ACA5CD90029E386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C2A2461ACA5CD90029E386 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +69,12 @@
 		E4C2A25A1ACA5CD90029E386 /* TodayLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C2A25F1ACA5CD90029E386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4C2A2601ACA5CD90029E386 /* TodayLightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayLightTests.m; sourceTree = "<group>"; };
+		E4C2A26E1ACA5D9E0029E386 /* TodayLightWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayLightWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C2A2701ACA5D9E0029E386 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		E4C2A2741ACA5D9E0029E386 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4C2A2751ACA5D9E0029E386 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		E4C2A2761ACA5D9E0029E386 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		E4C2A2781ACA5D9E0029E386 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,15 +92,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4C2A26B1ACA5D9E0029E386 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C2A2711ACA5D9E0029E386 /* NotificationCenter.framework in Frameworks */,
+				4A0AAA2C01E13189A8DF52F6 /* libPods-TodayLightWidget.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51CEF39CD5F1C8ABF2519043 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46C0DAF22FC5D4793B9F012C /* Pods-TodayLightWidget.debug.xcconfig */,
+				008D0D05C83612FCBAF4FFF3 /* Pods-TodayLightWidget.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E4C2A2381ACA5CD90029E386 = {
 			isa = PBXGroup;
 			children = (
 				E4C2A2431ACA5CD90029E386 /* TodayLight */,
 				E4C2A25D1ACA5CD90029E386 /* TodayLightTests */,
+				E4C2A2721ACA5D9E0029E386 /* TodayLightWidget */,
+				E4C2A26F1ACA5D9E0029E386 /* Frameworks */,
 				E4C2A2421ACA5CD90029E386 /* Products */,
+				51CEF39CD5F1C8ABF2519043 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +130,7 @@
 			children = (
 				E4C2A2411ACA5CD90029E386 /* TodayLight.app */,
 				E4C2A25A1ACA5CD90029E386 /* TodayLightTests.xctest */,
+				E4C2A26E1ACA5D9E0029E386 /* TodayLightWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +176,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E4C2A26F1ACA5D9E0029E386 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4C2A2701ACA5D9E0029E386 /* NotificationCenter.framework */,
+				C1DEB876378600CB68C93F98 /* libPods-TodayLightWidget.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4C2A2721ACA5D9E0029E386 /* TodayLightWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E4C2A2751ACA5D9E0029E386 /* TodayViewController.h */,
+				E4C2A2761ACA5D9E0029E386 /* TodayViewController.m */,
+				E4C2A2781ACA5D9E0029E386 /* MainInterface.storyboard */,
+				E4C2A2731ACA5D9E0029E386 /* Supporting Files */,
+			);
+			path = TodayLightWidget;
+			sourceTree = "<group>";
+		};
+		E4C2A2731ACA5D9E0029E386 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4C2A2741ACA5D9E0029E386 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,10 +214,12 @@
 				E4C2A23D1ACA5CD90029E386 /* Sources */,
 				E4C2A23E1ACA5CD90029E386 /* Frameworks */,
 				E4C2A23F1ACA5CD90029E386 /* Resources */,
+				E4C2A2801ACA5D9E0029E386 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E4C2A27B1ACA5D9E0029E386 /* PBXTargetDependency */,
 			);
 			name = TodayLight;
 			productName = TodayLight;
@@ -157,6 +244,25 @@
 			productReference = E4C2A25A1ACA5CD90029E386 /* TodayLightTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E4C2A26D1ACA5D9E0029E386 /* TodayLightWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4C2A27D1ACA5D9E0029E386 /* Build configuration list for PBXNativeTarget "TodayLightWidget" */;
+			buildPhases = (
+				16CED30B7FC32A58E7901D50 /* Check Pods Manifest.lock */,
+				E4C2A26A1ACA5D9E0029E386 /* Sources */,
+				E4C2A26B1ACA5D9E0029E386 /* Frameworks */,
+				E4C2A26C1ACA5D9E0029E386 /* Resources */,
+				06DCF4D47BA5FD457BA3267B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayLightWidget;
+			productName = TodayLightWidget;
+			productReference = E4C2A26E1ACA5D9E0029E386 /* TodayLightWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +278,9 @@
 					E4C2A2591ACA5CD90029E386 = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = E4C2A2401ACA5CD90029E386;
+					};
+					E4C2A26D1ACA5D9E0029E386 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -190,6 +299,7 @@
 			targets = (
 				E4C2A2401ACA5CD90029E386 /* TodayLight */,
 				E4C2A2591ACA5CD90029E386 /* TodayLightTests */,
+				E4C2A26D1ACA5D9E0029E386 /* TodayLightWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -212,7 +322,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4C2A26C1ACA5D9E0029E386 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C2A2791ACA5D9E0029E386 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06DCF4D47BA5FD457BA3267B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodayLightWidget/Pods-TodayLightWidget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16CED30B7FC32A58E7901D50 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E4C2A23D1ACA5CD90029E386 /* Sources */ = {
@@ -233,6 +384,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4C2A26A1ACA5D9E0029E386 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C2A2771ACA5D9E0029E386 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -240,6 +399,11 @@
 			isa = PBXTargetDependency;
 			target = E4C2A2401ACA5CD90029E386 /* TodayLight */;
 			targetProxy = E4C2A25B1ACA5CD90029E386 /* PBXContainerItemProxy */;
+		};
+		E4C2A27B1ACA5D9E0029E386 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4C2A26D1ACA5D9E0029E386 /* TodayLightWidget */;
+			targetProxy = E4C2A27A1ACA5D9E0029E386 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,6 +557,32 @@
 			};
 			name = Release;
 		};
+		E4C2A27E1ACA5D9E0029E386 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46C0DAF22FC5D4793B9F012C /* Pods-TodayLightWidget.debug.xcconfig */;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TodayLightWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E4C2A27F1ACA5D9E0029E386 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 008D0D05C83612FCBAF4FFF3 /* Pods-TodayLightWidget.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = TodayLightWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,6 +602,7 @@
 				E4C2A2661ACA5CD90029E386 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4C2A2671ACA5CD90029E386 /* Build configuration list for PBXNativeTarget "TodayLightTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +611,16 @@
 				E4C2A2691ACA5CD90029E386 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4C2A27D1ACA5D9E0029E386 /* Build configuration list for PBXNativeTarget "TodayLightWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4C2A27E1ACA5D9E0029E386 /* Debug */,
+				E4C2A27F1ACA5D9E0029E386 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
