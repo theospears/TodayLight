@@ -10,7 +10,7 @@
 #import <NotificationCenter/NotificationCenter.h>
 #import <CocoaAsyncSocket/GCDAsyncUdpSocket.h>
 
-NSString* host = @"192.168.0.51";
+NSString* host = @"192.168.0.50";
 int port = 8899;
 
 @interface TodayViewController () <NCWidgetProviding>
@@ -57,34 +57,45 @@ int port = 8899;
 
 }
 
+- (void)sendCommandPacket:(int)command withParam:(int)param {
+    unsigned char bytes[] = {command, param, 0x55};
+
+    [self sendPacket:[NSData dataWithBytes:bytes length:3]];
+}
+
+
+- (void)sendCommandPacket:(int)command {
+    [self sendCommandPacket:command withParam:0x00];
+}
+
 - (IBAction)turnOnLights:(id)sender {
-    [self sendPacket:[NSData dataWithBytes:"\x4B\x00\x55" length:3]];
-    [self sendPacket:[NSData dataWithBytes:"\xC2\x00\x55" length:3]];
+    [self sendCommandPacket:0x4B];
+    [self sendCommandPacket:0xC2];
 }
 
 - (IBAction)turnOffLights:(id)sender {
-    [self sendPacket:[NSData dataWithBytes:"\x4C\x00\x55" length:3]];
+    [self sendCommandPacket:0x4C];
 }
 
 - (IBAction)redLights:(id)sender {
-    [self sendPacket:[NSData dataWithBytes:"\x4B\x00\x55" length:3]];
-    [self sendPacket:[NSData dataWithBytes:"\x40\xB0\x55" length:3]];
-    [self sendPacket:[NSData dataWithBytes:"\x40\xB0\x55" length:3]];
-    [self sendPacket:[NSData dataWithBytes:"\x40\xB0\x55" length:3]];
+    [self sendCommandPacket:0x4B];
+    [self sendCommandPacket:0x40 withParam:0xB0];
+    [self sendCommandPacket:0x40 withParam:0xB0];
+    [self sendCommandPacket:0x40 withParam:0xB0];
 }
 
 - (IBAction)greenLights:(id)sender {
-    [self sendPacket:[NSData dataWithBytes:"\x4B\x00\x55" length:3]];
-    [self sendPacket:[NSData dataWithBytes:"\x40\x60\x55" length:3]];
-    [self sendPacket:[NSData dataWithBytes:"\x40\x60\x55" length:3]];
-    [self sendPacket:[NSData dataWithBytes:"\x40\x60\x55" length:3]];
+    [self sendCommandPacket:0x4B];
+    [self sendCommandPacket:0x40 withParam:0x60];
+    [self sendCommandPacket:0x40 withParam:0x60];
+    [self sendCommandPacket:0x40 withParam:0x60];
 }
 
 - (IBAction)blueLights:(id)sender {
-    [self sendPacket:[NSData dataWithBytes:"\x4B\x00\x55" length:3]];
-    [self sendPacket:[NSData dataWithBytes:"\x40\x10\x55" length:3]];
-    [self sendPacket:[NSData dataWithBytes:"\x40\x10\x55" length:3]];
-    [self sendPacket:[NSData dataWithBytes:"\x40\x10\x55" length:3]];
+    [self sendCommandPacket:0x4B];
+    [self sendCommandPacket:0x40 withParam:0x10];
+    [self sendCommandPacket:0x40 withParam:0x10];
+    [self sendCommandPacket:0x40 withParam:0x10];
 }
 
 @end
