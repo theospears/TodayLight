@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Theo Spears. All rights reserved.
 //
 
+#import "Constants.m"
 #import "TodayViewController.h"
 #import <NotificationCenter/NotificationCenter.h>
 #import <CocoaAsyncSocket/GCDAsyncUdpSocket.h>
@@ -68,34 +69,34 @@ int port = 8899;
     [self sendCommandPacket:command withParam:0x00];
 }
 
+- (void)setColor:(int)color {
+    [self sendCommandPacket:COMMAND_GROUP_4_ON];
+
+    // To compensate for packet loss...
+    [self sendCommandPacket:COMMAND_COLOR withParam:color];
+    [self sendCommandPacket:COMMAND_COLOR withParam:color];
+    [self sendCommandPacket:COMMAND_COLOR withParam:color];
+}
+
 - (IBAction)turnOnLights:(id)sender {
-    [self sendCommandPacket:0x4B];
-    [self sendCommandPacket:0xC2];
+    [self sendCommandPacket:COMMAND_GROUP_4_ON];
+    [self sendCommandPacket:COMMAND_ALL_WHITE];
 }
 
 - (IBAction)turnOffLights:(id)sender {
-    [self sendCommandPacket:0x4C];
+    [self sendCommandPacket:COMMAND_GROUP_4_OFF];
 }
 
 - (IBAction)redLights:(id)sender {
-    [self sendCommandPacket:0x4B];
-    [self sendCommandPacket:0x40 withParam:0xB0];
-    [self sendCommandPacket:0x40 withParam:0xB0];
-    [self sendCommandPacket:0x40 withParam:0xB0];
+    [self setColor:0xB0];
 }
 
 - (IBAction)greenLights:(id)sender {
-    [self sendCommandPacket:0x4B];
-    [self sendCommandPacket:0x40 withParam:0x60];
-    [self sendCommandPacket:0x40 withParam:0x60];
-    [self sendCommandPacket:0x40 withParam:0x60];
+    [self setColor:0x60];
 }
 
 - (IBAction)blueLights:(id)sender {
-    [self sendCommandPacket:0x4B];
-    [self sendCommandPacket:0x40 withParam:0x10];
-    [self sendCommandPacket:0x40 withParam:0x10];
-    [self sendCommandPacket:0x40 withParam:0x10];
+    [self setColor:0x10];
 }
 
 @end

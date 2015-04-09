@@ -19,6 +19,7 @@
 		E4C2A2771ACA5D9E0029E386 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C2A2761ACA5D9E0029E386 /* TodayViewController.m */; };
 		E4C2A2791ACA5D9E0029E386 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4C2A2781ACA5D9E0029E386 /* MainInterface.storyboard */; };
 		E4C2A27C1ACA5D9E0029E386 /* TodayLightWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E4C2A26E1ACA5D9E0029E386 /* TodayLightWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F580DB991AD64B29004448BA /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = F580DB981AD64B29004448BA /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		E4C2A2751ACA5D9E0029E386 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
 		E4C2A2761ACA5D9E0029E386 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		E4C2A2781ACA5D9E0029E386 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		F580DB981AD64B29004448BA /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				E4C2A2761ACA5D9E0029E386 /* TodayViewController.m */,
 				E4C2A2781ACA5D9E0029E386 /* MainInterface.storyboard */,
 				E4C2A2731ACA5D9E0029E386 /* Supporting Files */,
+				F580DB981AD64B29004448BA /* Constants.m */,
 			);
 			path = TodayLightWidget;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				TargetAttributes = {
 					E4C2A2401ACA5CD90029E386 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = D32928GQG9;
 					};
 					E4C2A2591ACA5CD90029E386 = {
 						CreatedOnToolsVersion = 6.2;
@@ -389,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C2A2771ACA5D9E0029E386 /* TodayViewController.m in Sources */,
+				F580DB991AD64B29004448BA /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,9 +512,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TodayLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -517,9 +525,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TodayLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
